@@ -10,7 +10,6 @@ class Sadplay < Formula
   depends_on "fftw"
   depends_on "sdl2"
 
-
   def install
     system "./configure", "--disable-debug",
                           "--disable-dependency-tracking",
