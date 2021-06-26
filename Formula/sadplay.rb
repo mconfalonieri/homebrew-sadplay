@@ -16,7 +16,7 @@ class Sadplay < Formula
                           "--disable-dependency-tracking",
                           "--disable-silent-rules",
                           "--prefix=#{prefix}"
-    system "gmake"
+    system "gmake", "install"
   end
 
   test do
