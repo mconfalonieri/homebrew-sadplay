@@ -10,7 +10,7 @@ class Sadplay < Formula
 
   depends_on "cmake" => :build
   depends_on "sdl2"
-  depends_on "fftw3"
+  depends_on "fftw"
 
 
   def install
