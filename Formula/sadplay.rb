@@ -6,9 +6,9 @@ class Sadplay < Formula
   license "GPL-3.0"
 
   depends_on "make" => :build
+  depends_on "adplug"
+  depends_on "fftw"
   depends_on "sdl2"
-  depends_on "fftw" => "3"
-  depends_on "adplug" => "2.3"
 
 
   def install
