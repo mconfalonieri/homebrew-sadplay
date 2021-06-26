@@ -8,7 +8,10 @@ class Sadplay < Formula
   sha256 "85a1c6cfd0ba26328a43fe60429dab05b52da45be935064f52de14c20db604ca"
   license "GPL-3.0"
 
-  # depends_on "cmake" => :build
+  depends_on "cmake" => :build
+  depends_on "sdl2"
+  depends_on "fftw3"
+
 
   def install
     # ENV.deparallelize  # if your formula fails when building in parallel
@@ -17,7 +20,7 @@ class Sadplay < Formula
                           "--disable-dependency-tracking",
                           "--disable-silent-rules",
                           "--prefix=#{prefix}"
-    # system "cmake", ".", *std_cmake_args
+    system "cmake", ".", *std_cmake_args
   end
 
   test do
@@ -30,6 +33,6 @@ class Sadplay < Formula
     #
     # The installed folder is not in the path, so use the entire path to any
     # executables being tested: `system "#{bin}/program", "do", "something"`.
-    system "false"
+    system "#{bin}/sadplay"
   end
 end
