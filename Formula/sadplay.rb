@@ -19,8 +19,7 @@ class Sadplay < Formula
     system "./configure", "--disable-debug",
                           "--disable-dependency-tracking",
                           "--disable-silent-rules",
-                          "--prefix=#{prefix}",
-                          "--with-sdl-exec-prefix=#{bin}/.."
+                          "--prefix=#{prefix}"
     system "cmake", ".", *std_cmake_args
   end
 
