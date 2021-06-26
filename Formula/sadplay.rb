@@ -2,7 +2,7 @@ class Sadplay < Formula
   desc "Simple SDL AdLib player"
   homepage "https://sadplay.marcoconfalonieri.it"
   url "https://github.com/mconfalonieri/sadplay/releases/download/v1.0.1/sadplay-1.0.1.tar.gz"
-  sha256 "85a1c6cfd0ba26328a43fe60429dab05b52da45be935064f52de14c20db604ca"
+  sha256 "d6432fb944bdbe79030ce2bf4e9b88f2228ffe9ea13e594d0afd1c371e52ad84"
   license "GPL-3.0"
 
   depends_on "make" => :build
