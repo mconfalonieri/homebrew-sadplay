@@ -8,7 +8,7 @@ class Sadplay < Formula
   sha256 "85a1c6cfd0ba26328a43fe60429dab05b52da45be935064f52de14c20db604ca"
   license "GPL-3.0"
 
-  depends_on "cmake" => :build
+  depends_on "make" => :build
   depends_on "sdl2"
   depends_on "fftw" => "3"
   depends_on "adplug" => "2.3"
@@ -21,7 +21,7 @@ class Sadplay < Formula
                           "--disable-dependency-tracking",
                           "--disable-silent-rules",
                           "--prefix=#{prefix}"
-    system "cmake", ".", *std_cmake_args
+    system "make", ".", *std_cmake_args
   end
 
   test do
