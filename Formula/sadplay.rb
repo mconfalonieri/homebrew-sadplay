@@ -14,5 +14,4 @@ class Sadplay < Formula
     system "./configure", "--prefix=#{prefix}"
     system "gmake", "install"
   end
-
 end
