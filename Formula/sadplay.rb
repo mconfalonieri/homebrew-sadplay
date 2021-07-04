@@ -11,10 +11,7 @@ class Sadplay < Formula
   depends_on "sdl2"
 
   def install
-    system "./configure", "--disable-debug",
-                          "--disable-dependency-tracking",
-                          "--disable-silent-rules",
-                          "--prefix=#{prefix}"
+    system "./configure", "--prefix=#{prefix}"
     system "gmake", "install"
   end
 
