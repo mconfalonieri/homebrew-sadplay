@@ -12,6 +12,6 @@ class Sadplay < Formula
 
   def install
     system "./configure", "--prefix=#{prefix}"
-    system "gmake", "install"
+    system "make", "install"
   end
 end
