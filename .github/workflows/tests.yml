@@ -35,7 +35,7 @@ jobs:
       
       - run: brew install --build-bottle adplug
 
-      - run: brew test-bot --only-formulae --build-from-source
+      - run: brew test-bot --only-formulae --build-from-source; cat /home/runner/.cache/Homebrew/Logs/sadplay/02.gmake; false
         if: github.event_name == 'pull_request'
 
       - name: Upload bottles as artifact
