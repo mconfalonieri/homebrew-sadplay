@@ -32,9 +32,15 @@ jobs:
       - run: brew test-bot --only-setup
 
       - run: brew test-bot --only-tap-syntax
-
+      
+      - run: brew install --build-bottle adplug
+     
+      - run: brew install --build-bottle libgpg-error
+      
       - run: brew test-bot --only-formulae --build-from-source
         if: github.event_name == 'pull_request'
+     
+      - run: brew uninstall libgpg-error
 
       - name: Upload bottles as artifact
         if: always() && github.event_name == 'pull_request'
